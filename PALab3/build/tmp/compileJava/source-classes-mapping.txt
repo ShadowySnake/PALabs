@@ -1,0 +1,22 @@
+compulsoryPackage/Payable.java
+ compulsoryPackage.Payable
+compulsoryPackage/City.java
+ compulsoryPackage.City
+compulsoryPackage/Map.java
+ compulsoryPackage.Map
+compulsoryPackage/Main.java
+ compulsoryPackage.Main
+compulsoryPackage/Museum.java
+ compulsoryPackage.Museum
+compulsoryPackage/Locations.java
+ compulsoryPackage.Locations
+compulsoryPackage/Church.java
+ compulsoryPackage.Church
+compulsoryPackage/Classifiable.java
+ compulsoryPackage.Classifiable
+compulsoryPackage/Visitable.java
+ compulsoryPackage.Visitable
+compulsoryPackage/Hotel.java
+ compulsoryPackage.Hotel
+compulsoryPackage/Restaurant.java
+ compulsoryPackage.Restaurant
