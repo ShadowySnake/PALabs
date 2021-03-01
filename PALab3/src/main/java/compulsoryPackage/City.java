@@ -35,17 +35,17 @@ public class City {
      */
     @Override
     public String toString() {
-       String cityMap = "\nThe map for the city is the following:\n";
+       StringBuilder cityMap = new StringBuilder("\nThe map for the city is the following:\n");
 
        for(Map map : mappedLocations){
            if( map.getTwoWayRoad() ){
-               cityMap = cityMap + map.getFirstLocationName() + " <-> " + map.getSecondLocationName() + " has the cost: " + map.getTimeCost() + "\n";
+               cityMap.append(map.getFirstLocationName()).append(" <-> ").append(map.getSecondLocationName()).append(" has the cost: ").append(map.getTimeCost()).append("\n");
            }
            else{
-               cityMap = cityMap + map.getFirstLocationName() + " -> " + map.getSecondLocationName() + " has the cost: " + map.getTimeCost() + "\n";
+               cityMap.append(map.getFirstLocationName()).append(" -> ").append(map.getSecondLocationName()).append(" has the cost: ").append(map.getTimeCost()).append("\n");
            }
        }
 
-       return cityMap;
+       return cityMap.toString();
     }
 }
