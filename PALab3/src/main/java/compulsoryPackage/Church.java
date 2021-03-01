@@ -2,6 +2,10 @@ package compulsoryPackage;
 
 import java.time.LocalTime;
 
+/**
+ * author: Zamfir Adrian-Iulian
+ * Church is a class that shows a location which is only Visitable.
+ */
 public class Church extends Locations implements Visitable{
 
     public Church(String churchName){

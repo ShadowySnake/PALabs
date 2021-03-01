@@ -2,6 +2,10 @@ package compulsoryPackage;
 
 import java.time.LocalTime;
 
+/**
+ * author: Zamfir Adrian-Iulian
+ * Museum is a class which shows a Location that is both Visitable and Payable
+ */
 public class Museum extends Locations implements Visitable,Payable {
 
     public Museum(String museumName){

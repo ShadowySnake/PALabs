@@ -1,5 +1,9 @@
 package compulsoryPackage;
 
+/**
+ * author: Zamfir Adrian-Iulian
+ * Restaurant is a class that shows a location which is only Classifiable.
+ */
 public class Restaurant extends Locations implements Classifiable{
 
     public Restaurant(String restaurantName){

@@ -2,6 +2,9 @@ package compulsoryPackage;
 
 import java.time.LocalTime;
 
+/**
+ * author: Zamfir Adrian-Iulian
+ */
 public class Locations {
     String locationName;
     double entryPrice;
