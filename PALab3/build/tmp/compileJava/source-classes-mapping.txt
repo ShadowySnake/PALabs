@@ -40,7 +40,7 @@ optionalPackage/allLocations/Church.java
  optionalPackage.allLocations.Church
 optionalPackage/allLocations/Museum.java
  optionalPackage.allLocations.Museum
-optionalPackage/Main.java
- optionalPackage.Main
 optionalPackage/TravelPlan.java
  optionalPackage.TravelPlan
+optionalPackage/Main.java
+ optionalPackage.Main

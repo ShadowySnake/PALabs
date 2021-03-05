@@ -56,7 +56,7 @@ public class Main {
         TravelPlan travel1 = new TravelPlan(theCity);
         ArrayList<Integer> preferenceList = new ArrayList<>(Arrays.asList(1,5,10,9,6,3));
         travel1.setVisitingPreferences(preferenceList);
-        System.out.println(travel1.calculateShortestPath(hotel1,church1));
+        System.out.println(travel1.calculateShortestPath(hotel1,church2));
 
 
         /*

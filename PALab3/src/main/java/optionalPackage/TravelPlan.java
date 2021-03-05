@@ -31,7 +31,12 @@ public class TravelPlan {
         while ( currentLocationIndex != endingLocationIndex){
             for(Map map : mappedLocations){
                 if( currentLocation.getLocationName().equals(map.getFirstLocationName()) ){
-                    if(currentPreference < visitingPreferences.get(locationsArrayList.indexOf(map.secondLocation))){
+                    if( endingLocation.getLocationName().equals(map.getSecondLocationName()) ){
+                        nextLocation = map.secondLocation;
+                        currentCost = map.getTimeCost();
+                        break;
+                    }
+                    if (currentPreference < visitingPreferences.get(locationsArrayList.indexOf(map.secondLocation))) {
                         currentPreference = visitingPreferences.get(locationsArrayList.indexOf(map.secondLocation));
                         nextLocation = map.secondLocation;
                         currentCost = map.getTimeCost();
