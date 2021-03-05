@@ -49,5 +49,9 @@ public class Main {
         System.out.println(theCity.toString());
         theCity.displayFreeVisitable();
 
+        TravelPlan travel1 = new TravelPlan(theCity);
+        travel1.setVisitingPreferences(new int[]{1,5,10,9,6,3});
+        System.out.println(travel1.calculateShortestPath(hotel1,church1));
+
     }
 }

@@ -20,11 +20,20 @@ public class City {
      *  Prints on screen all visitable locations that are not payable.
      */
     void displayFreeVisitable(){
+        System.out.println("The locations that are visitable and not payable are:");
         for (Locations currentLocation : locationsList){
             if( (currentLocation.isVisitable()) && (!currentLocation.isPayable()) ){
                 System.out.println(currentLocation.getLocationName());
             }
         }
+    }
+
+    ArrayList<Locations> getLocationsList(){
+        return this.locationsList;
+    }
+
+    ArrayList<Map> getMappedLocations(){
+        return this.mappedLocations;
     }
 
     /**
@@ -36,7 +45,7 @@ public class City {
      */
     void addRoadBetweenLocations(Locations givenLocation1, Locations givenLocation2, int givenTimeCost, boolean bothWays){
         mappedLocations.add(new Map(givenLocation1,givenLocation2,givenTimeCost,bothWays));
-        // if (bothWays) mappedLocations.add(new Map(givenLocation2,givenLocation1,givenTimeCost,bothWays));
+        if (bothWays) mappedLocations.add(new Map(givenLocation2,givenLocation1,givenTimeCost,bothWays));
     }
 
     /**
@@ -48,12 +57,7 @@ public class City {
        StringBuilder cityMap = new StringBuilder("\nThe map for the city is the following:\n");
 
        for(Map map : mappedLocations){
-           if( map.getTwoWayRoad() ){
-               cityMap.append(map.getFirstLocationName()).append(" <-> ").append(map.getSecondLocationName()).append(" has the cost: ").append(map.getTimeCost()).append("\n");
-           }
-           else{
                cityMap.append(map.getFirstLocationName()).append(" -> ").append(map.getSecondLocationName()).append(" has the cost: ").append(map.getTimeCost()).append("\n");
-           }
        }
 
        return cityMap.toString();
