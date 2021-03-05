@@ -1,4 +1,4 @@
-package compulsoryPackage;
+package compulsoryPackage.interfaces;
 
 import java.time.LocalTime;
 

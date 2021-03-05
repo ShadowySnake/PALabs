@@ -1,22 +1,44 @@
-compulsoryPackage/Payable.java
- compulsoryPackage.Payable
-compulsoryPackage/Restaurant.java
- compulsoryPackage.Restaurant
-compulsoryPackage/Hotel.java
- compulsoryPackage.Hotel
-compulsoryPackage/Visitable.java
- compulsoryPackage.Visitable
-compulsoryPackage/Museum.java
- compulsoryPackage.Museum
-compulsoryPackage/Locations.java
- compulsoryPackage.Locations
-compulsoryPackage/Church.java
- compulsoryPackage.Church
-compulsoryPackage/Classifiable.java
- compulsoryPackage.Classifiable
-compulsoryPackage/City.java
- compulsoryPackage.City
+optionalPackage/interfaces/Visitable.java
+ optionalPackage.interfaces.Visitable
+compulsoryPackage/allLocations/Church.java
+ compulsoryPackage.allLocations.Church
 compulsoryPackage/Map.java
  compulsoryPackage.Map
+optionalPackage/City.java
+ optionalPackage.City
+optionalPackage/interfaces/Payable.java
+ optionalPackage.interfaces.Payable
+compulsoryPackage/interfaces/Visitable.java
+ compulsoryPackage.interfaces.Visitable
+compulsoryPackage/interfaces/Classifiable.java
+ compulsoryPackage.interfaces.Classifiable
+optionalPackage/interfaces/Classifiable.java
+ optionalPackage.interfaces.Classifiable
+compulsoryPackage/allLocations/Restaurant.java
+ compulsoryPackage.allLocations.Restaurant
+compulsoryPackage/allLocations/Museum.java
+ compulsoryPackage.allLocations.Museum
+compulsoryPackage/allLocations/Locations.java
+ compulsoryPackage.allLocations.Locations
+compulsoryPackage/City.java
+ compulsoryPackage.City
+compulsoryPackage/allLocations/Hotel.java
+ compulsoryPackage.allLocations.Hotel
+compulsoryPackage/interfaces/Payable.java
+ compulsoryPackage.interfaces.Payable
+optionalPackage/allLocations/Church.java
+ optionalPackage.allLocations.Church
+optionalPackage/allLocations/Museum.java
+ optionalPackage.allLocations.Museum
+optionalPackage/allLocations/Hotel.java
+ optionalPackage.allLocations.Hotel
+optionalPackage/allLocations/Restaurant.java
+ optionalPackage.allLocations.Restaurant
+optionalPackage/allLocations/Locations.java
+ optionalPackage.allLocations.Locations
+optionalPackage/Map.java
+ optionalPackage.Map
+optionalPackage/Main.java
+ optionalPackage.Main
 compulsoryPackage/Main.java
  compulsoryPackage.Main

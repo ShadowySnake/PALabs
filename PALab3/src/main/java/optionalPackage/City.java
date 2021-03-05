@@ -1,6 +1,6 @@
-package compulsoryPackage;
+package optionalPackage;
 
-import compulsoryPackage.allLocations.Locations;
+import optionalPackage.allLocations.Locations;
 
 import java.util.ArrayList;
 
@@ -9,14 +9,22 @@ import java.util.ArrayList;
  * @author Zamfir Adrian-Iulian
  */
 public class City {
-    /**
-     * Lists containing all the locations of a city, and the roads between those.
-     */
     ArrayList<Locations> locationsList = new ArrayList<>();
     ArrayList<Map> mappedLocations = new ArrayList<>();
 
     void addLocation(Locations givenLocation){
         locationsList.add(givenLocation);
+    }
+
+    /**
+     *  Prints on screen all visitable locations that are not payable.
+     */
+    void displayFreeVisitable(){
+        for (Locations currentLocation : locationsList){
+            if( (currentLocation.isVisitable()) && (!currentLocation.isPayable()) ){
+                System.out.println(currentLocation.getLocationName());
+            }
+        }
     }
 
     /**
@@ -26,7 +34,7 @@ public class City {
      * @param givenTimeCost is the time needed to get from start to end.
      * @param bothWays shows if the road can be used both ways ( from start to end  && from end to start )
      */
-    void addRoadBetweenLocations(Locations givenLocation1,Locations givenLocation2,int givenTimeCost,boolean bothWays){
+    void addRoadBetweenLocations(Locations givenLocation1, Locations givenLocation2, int givenTimeCost, boolean bothWays){
         mappedLocations.add(new Map(givenLocation1,givenLocation2,givenTimeCost,bothWays));
         // if (bothWays) mappedLocations.add(new Map(givenLocation2,givenLocation1,givenTimeCost,bothWays));
     }

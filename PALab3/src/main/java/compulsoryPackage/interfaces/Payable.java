@@ -1,4 +1,4 @@
-package compulsoryPackage;
+package compulsoryPackage.interfaces;
 
 /**
  * author: Zamfir Adrian-Iulian

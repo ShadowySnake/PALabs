@@ -1,6 +1,6 @@
-package compulsoryPackage;
+package optionalPackage;
 
-import compulsoryPackage.allLocations.Locations;
+import optionalPackage.allLocations.Locations;
 
 /**
  * @author Zamfir Adrian-Iulian
@@ -10,7 +10,7 @@ public class Map {
     int timeCost;
     boolean twoWayRoad;
 
-    public Map(Locations givenLocation1,Locations givenLocation2,int givenTimeCost,boolean possibleTwoWay){
+    public Map(Locations givenLocation1, Locations givenLocation2, int givenTimeCost, boolean possibleTwoWay){
         this.firstLocation = givenLocation1;
         this.secondLocation = givenLocation2;
         this.timeCost = givenTimeCost;

@@ -1,9 +1,9 @@
-package compulsoryPackage;
+package compulsoryPackage.allLocations;
 
 import java.time.LocalTime;
 
 /**
- * author: Zamfir Adrian-Iulian
+ * @author Zamfir Adrian-Iulian
  */
 public class Locations {
     String locationName;

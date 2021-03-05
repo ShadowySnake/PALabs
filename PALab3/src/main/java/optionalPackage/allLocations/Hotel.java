@@ -1,10 +1,11 @@
-package compulsoryPackage;
+package optionalPackage.allLocations;
+
+import optionalPackage.interfaces.Classifiable;
 
 /**
- * author: Zamfir Adrian-Iulian
- * Hotel is a class that shows a Location which is only Classifiable.
+ * @author Zamfir Adrian-Iulian
  */
-public class Hotel extends Locations implements Classifiable{
+public class Hotel extends Locations implements Classifiable {
 
     public Hotel(String hotelName){
         super(hotelName);

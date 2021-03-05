@@ -1,9 +1,9 @@
-package compulsoryPackage;
+package optionalPackage;
 
-import compulsoryPackage.allLocations.Church;
-import compulsoryPackage.allLocations.Hotel;
-import compulsoryPackage.allLocations.Museum;
-import compulsoryPackage.allLocations.Restaurant;
+import optionalPackage.allLocations.Church;
+import optionalPackage.allLocations.Hotel;
+import optionalPackage.allLocations.Museum;
+import optionalPackage.allLocations.Restaurant;
 
 /**
  * author: Zamfir Adrian-Iulian
@@ -47,6 +47,7 @@ public class Main {
         theCity.addRoadBetweenLocations(church2,restaurant1,20,false);
 
         System.out.println(theCity.toString());
+        theCity.displayFreeVisitable();
 
     }
 }

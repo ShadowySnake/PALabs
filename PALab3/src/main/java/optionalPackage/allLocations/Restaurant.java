@@ -1,10 +1,11 @@
-package compulsoryPackage;
+package optionalPackage.allLocations;
+
+import optionalPackage.interfaces.Classifiable;
 
 /**
- * author: Zamfir Adrian-Iulian
- * Restaurant is a class that shows a location which is only Classifiable.
+ * @author Zamfir Adrian-Iulian
  */
-public class Restaurant extends Locations implements Classifiable{
+public class Restaurant extends Locations implements Classifiable {
 
     public Restaurant(String restaurantName){
         super(restaurantName);
