@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 public class TravelPlan {
     City theCity;
-    int[] visitingPreferences;
+    ArrayList<Integer> visitingPreferences = new ArrayList<>();
 
     public TravelPlan(City givenCity){
         this.theCity = givenCity;
     }
 
-    public void setVisitingPreferences(int[] visitingPreferences) {
+    public void setVisitingPreferences(ArrayList<Integer> visitingPreferences) {
         this.visitingPreferences = visitingPreferences;
     }
 
@@ -31,8 +31,8 @@ public class TravelPlan {
         while ( currentLocationIndex != endingLocationIndex){
             for(Map map : mappedLocations){
                 if( currentLocation.getLocationName().equals(map.getFirstLocationName()) ){
-                    if(currentPreference < visitingPreferences[locationsArrayList.indexOf(map.secondLocation)]){
-                        currentPreference = visitingPreferences[locationsArrayList.indexOf(map.secondLocation)];
+                    if(currentPreference < visitingPreferences.get(locationsArrayList.indexOf(map.secondLocation))){
+                        currentPreference = visitingPreferences.get(locationsArrayList.indexOf(map.secondLocation));
                         nextLocation = map.secondLocation;
                         currentCost = map.getTimeCost();
                     }

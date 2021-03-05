@@ -4,6 +4,10 @@ import optionalPackage.allLocations.Church;
 import optionalPackage.allLocations.Hotel;
 import optionalPackage.allLocations.Museum;
 import optionalPackage.allLocations.Restaurant;
+import optionalPackage.interfaces.Visitable;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * author: Zamfir Adrian-Iulian
@@ -50,8 +54,15 @@ public class Main {
         theCity.displayFreeVisitable();
 
         TravelPlan travel1 = new TravelPlan(theCity);
-        travel1.setVisitingPreferences(new int[]{1,5,10,9,6,3});
+        ArrayList<Integer> preferenceList = new ArrayList<>(Arrays.asList(1,5,10,9,6,3));
+        travel1.setVisitingPreferences(preferenceList);
         System.out.println(travel1.calculateShortestPath(hotel1,church1));
+
+
+        /*
+          In order to test the getVisitingDuration static method of interface Visitable
+          System.out.println(Visitable.getVisitingDuration(museum1.getOpeningHour(),museum1.getClosingHour()));
+         */
 
     }
 }

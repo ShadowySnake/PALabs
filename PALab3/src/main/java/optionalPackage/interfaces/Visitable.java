@@ -1,5 +1,6 @@
 package optionalPackage.interfaces;
 
+import java.time.Duration;
 import java.time.LocalTime;
 
 /**
@@ -10,6 +11,10 @@ public interface Visitable {
     default void setDefaultHours(){
         this.setOpeningHour(LocalTime.of(9,30));
         this.setClosingHour(LocalTime.of(20,0));
+    }
+
+    static Duration getVisitingDuration(LocalTime startingTime,LocalTime closingTime){
+        return Duration.between(startingTime,closingTime);
     }
 
     LocalTime getOpeningHour();

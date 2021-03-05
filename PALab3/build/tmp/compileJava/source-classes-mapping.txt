@@ -26,21 +26,21 @@ compulsoryPackage/allLocations/Hotel.java
  compulsoryPackage.allLocations.Hotel
 compulsoryPackage/interfaces/Payable.java
  compulsoryPackage.interfaces.Payable
-optionalPackage/allLocations/Church.java
- optionalPackage.allLocations.Church
-optionalPackage/allLocations/Museum.java
- optionalPackage.allLocations.Museum
+optionalPackage/City.java
+ optionalPackage.City
+optionalPackage/Map.java
+ optionalPackage.Map
 optionalPackage/allLocations/Hotel.java
  optionalPackage.allLocations.Hotel
 optionalPackage/allLocations/Restaurant.java
  optionalPackage.allLocations.Restaurant
 optionalPackage/allLocations/Locations.java
  optionalPackage.allLocations.Locations
-optionalPackage/Map.java
- optionalPackage.Map
+optionalPackage/allLocations/Church.java
+ optionalPackage.allLocations.Church
+optionalPackage/allLocations/Museum.java
+ optionalPackage.allLocations.Museum
 optionalPackage/Main.java
  optionalPackage.Main
 optionalPackage/TravelPlan.java
  optionalPackage.TravelPlan
-optionalPackage/City.java
- optionalPackage.City
