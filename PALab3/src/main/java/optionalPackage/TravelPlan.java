@@ -16,6 +16,12 @@ public class TravelPlan {
         this.visitingPreferences = visitingPreferences;
     }
 
+    /**
+     * A method that calculates the shortest path from one location to the other, based on the tourist preference.
+     * @param startingLocation This is the starting location.
+     * @param endingLocation This is the location the tourist wants to arrive to.
+     * @return returns an integer containing the smallest cost between the two given locations above.
+     */
     public int calculateShortestPath(Locations startingLocation, Locations endingLocation){
         System.out.println("\nThe shortest path based on preferences, starting from " + startingLocation.getLocationName() + " to " + endingLocation.getLocationName() + " has the cost:");
         Locations currentLocation = startingLocation;

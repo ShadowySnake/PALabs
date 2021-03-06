@@ -40,7 +40,31 @@ optionalPackage/allLocations/Church.java
  optionalPackage.allLocations.Church
 optionalPackage/allLocations/Museum.java
  optionalPackage.allLocations.Museum
-optionalPackage/TravelPlan.java
- optionalPackage.TravelPlan
+bonusPackage/allLocations/Locations.java
+ bonusPackage.allLocations.Locations
+bonusPackage/City.java
+ bonusPackage.City
+bonusPackage/interfaces/Classifiable.java
+ bonusPackage.interfaces.Classifiable
+bonusPackage/interfaces/Visitable.java
+ bonusPackage.interfaces.Visitable
+bonusPackage/Map.java
+ bonusPackage.Map
+bonusPackage/allLocations/Restaurant.java
+ bonusPackage.allLocations.Restaurant
+bonusPackage/interfaces/Payable.java
+ bonusPackage.interfaces.Payable
+bonusPackage/allLocations/Museum.java
+ bonusPackage.allLocations.Museum
+bonusPackage/allLocations/Church.java
+ bonusPackage.allLocations.Church
+bonusPackage/allLocations/Hotel.java
+ bonusPackage.allLocations.Hotel
+bonusPackage/TravelPlan.java
+ bonusPackage.TravelPlan
 optionalPackage/Main.java
  optionalPackage.Main
+bonusPackage/Main.java
+ bonusPackage.Main
+optionalPackage/TravelPlan.java
+ optionalPackage.TravelPlan

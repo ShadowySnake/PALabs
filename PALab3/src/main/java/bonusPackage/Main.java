@@ -1,10 +1,9 @@
-package optionalPackage;
+package bonusPackage;
 
-import optionalPackage.allLocations.Church;
-import optionalPackage.allLocations.Hotel;
-import optionalPackage.allLocations.Museum;
-import optionalPackage.allLocations.Restaurant;
-import optionalPackage.interfaces.Visitable;
+import bonusPackage.allLocations.Church;
+import bonusPackage.allLocations.Hotel;
+import bonusPackage.allLocations.Museum;
+import bonusPackage.allLocations.Restaurant;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,19 +49,8 @@ public class Main {
         theCity.addRoadBetweenLocations(church1,restaurant1,10,false);
         theCity.addRoadBetweenLocations(church2,restaurant1,20,false);
 
-        System.out.println(theCity.toString());
-        theCity.displayFreeVisitable();
-
-        TravelPlan travel1 = new TravelPlan(theCity);
-        ArrayList<Integer> preferenceList = new ArrayList<>(Arrays.asList(1,5,10,9,6,3));
-        travel1.setVisitingPreferences(preferenceList);
-        System.out.println(travel1.calculateShortestPath(hotel1,restaurant1));
-
-
-        /*
-          In order to test the getVisitingDuration static method of interface Visitable
-          System.out.println(Visitable.getVisitingDuration(museum1.getOpeningHour(),museum1.getClosingHour()));
-         */
+        TravelPlan planOfTravel = new TravelPlan(theCity,5);
+        System.out.println(planOfTravel.buildPlanOfTravel());
 
     }
 }
