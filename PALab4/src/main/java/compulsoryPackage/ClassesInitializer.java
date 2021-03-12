@@ -51,9 +51,11 @@ public class ClassesInitializer {
 
     public void printMaps(){
         System.out.println("Student map is the following:");
-        System.out.println(studentsMap);
+        studentsMap.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(k -> System.out.println(k.getKey() + ": " + k.getValue()));
         System.out.println("School map is the following:");
-        System.out.println(schoolsMap);
+        schoolsMap.forEach((key, value) -> System.out.println(key + ": " + value));
     }
 
     @Override
