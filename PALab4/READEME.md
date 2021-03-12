@@ -18,3 +18,6 @@ UPDATE 4 :::
 UPDATE 5 :::
 ---- Created two maps that are then printed on screen, one is implemented using HASHMAP the other is implemented using TREEMAP.
 ---- The elements in HASHMAP seem to not be sorted ( probably due to hash value ) in alphabetical order.
+
+UPDATE 6 :::
+---- Replaced the method to print maps using SYSTEM.OUT, with a method that uses streams.
