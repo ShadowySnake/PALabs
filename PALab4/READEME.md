@@ -14,3 +14,7 @@ UPDATE 3 :::
 UPDATE 4 :::
 ---- Added the capacity for each school.
 ---- Added the initialization of preferences list for Students and Schools using lists.
+
+UPDATE 5 :::
+---- Created two maps that are then printed on screen, one is implemented using HASHMAP the other is implemented using TREEMAP.
+---- The elements in HASHMAP seem to not be sorted ( probably due to hash value ) in alphabetical order.
