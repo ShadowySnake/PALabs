@@ -10,3 +10,7 @@ UPDATE 2 :::
 
 UPDATE 3 :::
 ---- Restructured, made a class that occupies itself with the initializers instead of just using MAIN.
+
+UPDATE 4 :::
+---- Added the capacity for each school.
+---- Added the initialization of preferences list for Students and Schools using lists.
