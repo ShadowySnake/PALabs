@@ -1,8 +1,8 @@
+compulsoryPackage/ClassesInitializer.java
+ compulsoryPackage.ClassesInitializer
 compulsoryPackage/Student.java
  compulsoryPackage.Student
 compulsoryPackage/School.java
  compulsoryPackage.School
-compulsoryPackage/ClassesInitializer.java
- compulsoryPackage.ClassesInitializer
 compulsoryPackage/Main.java
  compulsoryPackage.Main
