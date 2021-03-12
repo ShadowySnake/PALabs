@@ -22,6 +22,7 @@ public class Main {
         theInitializer.setSchoolsPreferences(schoolsPreferences);
         theInitializer.setStudentsPreferences(studentsPreferences);
         System.out.println(theInitializer.toString());
+        theInitializer.printMaps();
 
     }
 }
