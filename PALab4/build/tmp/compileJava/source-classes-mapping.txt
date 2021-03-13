@@ -6,3 +6,13 @@ compulsoryPackage/ClassesInitializer.java
  compulsoryPackage.ClassesInitializer
 compulsoryPackage/Main.java
  compulsoryPackage.Main
+optionalPackage/Problem.java
+ optionalPackage.Problem
+optionalPackage/School.java
+ optionalPackage.School
+optionalPackage/Student.java
+ optionalPackage.Student
+optionalPackage/Solution.java
+ optionalPackage.Solution
+optionalPackage/OptionalMain.java
+ optionalPackage.OptionalMain
