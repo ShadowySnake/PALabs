@@ -26,6 +26,8 @@ public class OptionalMain {
 
         Solution theSolution = new Solution(theProblem);
         System.out.println(theSolution.matchingMaker());
+        theSolution.acceptablePreference("S0", Arrays.asList("H1","H2"));
+        System.out.println(theSolution.changeToFakeNames());
 
     }
 }

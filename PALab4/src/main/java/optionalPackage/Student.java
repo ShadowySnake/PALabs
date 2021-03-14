@@ -1,7 +1,5 @@
 package optionalPackage;
 
-import java.util.List;
-
 public class Student {
     String studentName;
 
@@ -11,5 +9,9 @@ public class Student {
 
     public String getStudentName() {
         return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 }

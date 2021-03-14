@@ -9,6 +9,10 @@ public class ClassesInitializer {
     Map<String, List<String>> studentsMap = new HashMap<>();
     Map<String, List<String>> schoolsMap = new TreeMap<String, List<String>>();
 
+    /*
+     * Direct initialization in a list or a tree set, without manually creating objects.
+     * All object are created by the stream.
+     */
     public ClassesInitializer(List<String> studentNames, List<String> schoolNames, List<Integer> schoolCapacities) {
         this.studentLinkedList = studentNames
                 .stream()
@@ -58,6 +62,10 @@ public class ClassesInitializer {
         schoolsMap.forEach((key, value) -> System.out.println(key + ": " + value));
     }
 
+    /**
+     * A method used to print all the available students and schools.
+     * @return returns a string with all students and school names
+     */
     @Override
     public String toString() {
         StringBuilder listPrinter = new StringBuilder("The contents are the following:\n---Students: ");

@@ -10,7 +10,7 @@ public class Main {
         List<String> studentNames = Arrays.asList("S1","S0","S3","S2");
         List<String> schoolNames = Arrays.asList("H2","H1","H0");
 
-        List<Integer> schoolCapacities = Arrays.asList(1,2,2); // must be given for the alfabetical order of school names
+        List<Integer> schoolCapacities = Arrays.asList(1,2,2); // must be given for the alphabetical order of school names
         List<List<String>> studentsPreferences =
                 Arrays.asList(Arrays.asList("H0", "H1", "H2"), Arrays.asList("H0", "H1", "H2"),
                         Arrays.asList("H0","H1"), Arrays.asList("H0","H2"));

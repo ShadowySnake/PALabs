@@ -1,6 +1,5 @@
 package optionalPackage;
 
-import java.util.List;
 
 public class School {
     String schoolName;
@@ -12,6 +11,10 @@ public class School {
 
     public String getSchoolName() {
         return schoolName;
+    }
+
+    public void setSchoolName(String schoolName) {
+        this.schoolName = schoolName;
     }
 
     public int getCapacity() {
