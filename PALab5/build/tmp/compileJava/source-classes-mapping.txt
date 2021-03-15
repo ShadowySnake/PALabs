@@ -1,0 +1,6 @@
+compulsoryPackage/IOClass.java
+ compulsoryPackage.IOClass
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
+compulsoryPackage/Catalog.java
+ compulsoryPackage.Catalog
