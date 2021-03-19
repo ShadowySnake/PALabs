@@ -1,6 +1,14 @@
-compulsoryPackage/IOClass.java
- compulsoryPackage.IOClass
+compulsoryPackage/itemsPackage/TextFile.java
+ compulsoryPackage.itemsPackage.TextFile
+compulsoryPackage/catalogPackage/Catalog.java
+ compulsoryPackage.catalogPackage.Catalog
+compulsoryPackage/itemsPackage/Items.java
+ compulsoryPackage.itemsPackage.Items
+compulsoryPackage/itemsPackage/PNG_image.java
+ compulsoryPackage.itemsPackage.PNG_image
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
-compulsoryPackage/Catalog.java
- compulsoryPackage.Catalog
+compulsoryPackage/CustomException.java
+ compulsoryPackage.CustomException
+compulsoryPackage/catalogPackage/IOClass.java
+ compulsoryPackage.catalogPackage.IOClass

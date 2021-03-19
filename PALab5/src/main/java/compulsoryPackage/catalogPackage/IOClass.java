@@ -1,16 +1,25 @@
-package compulsoryPackage;
+package compulsoryPackage.catalogPackage;
 
 import java.awt.*;
 import java.io.*;
 
 public class IOClass implements Serializable{
-    private String localPath;
-    private Desktop desktop;
+    String localPath;
+    Desktop desktop;
 
     public IOClass(String pathName){
         this.localPath = pathName;
     }
 
+    public void play(String filePath){
+        try {
+            File file = new File(localPath + filePath);
+            desktop.open(file);
+        } catch (IOException e) {
+            System.out.println("Unexpected error at 'playing' the file!");
+            e.printStackTrace();
+        }
+    }
 
     public void save(Catalog catalog, String filePath){
         try {
