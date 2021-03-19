@@ -14,3 +14,33 @@ compulsoryPackage/catalogPackage/Catalog.java
  compulsoryPackage.catalogPackage.Catalog
 compulsoryPackage/catalogPackage/IOClass.java
  compulsoryPackage.catalogPackage.IOClass
+optionalPackage/exceptionsThrower/CustomException.java
+ optionalPackage.exceptionsThrower.CustomException
+optionalPackage/itemsPackage/TextFile.java
+ optionalPackage.itemsPackage.TextFile
+optionalPackage/catalogPackage/Catalog.java
+ optionalPackage.catalogPackage.Catalog
+optionalPackage/exceptionsThrower/MyChecker.java
+ optionalPackage.exceptionsThrower.MyChecker
+optionalPackage/itemsPackage/PNG_image.java
+ optionalPackage.itemsPackage.PNG_image
+optionalPackage/itemsPackage/Items.java
+ optionalPackage.itemsPackage.Items
+optionalPackage/catalogPackage/IOClass.java
+ optionalPackage.catalogPackage.IOClass
+optionalPackage/catalogPackage/ReportCommand.java
+ optionalPackage.catalogPackage.ReportCommand
+optionalPackage/catalogPackage/ListCommand.java
+ optionalPackage.catalogPackage.ListCommand
+optionalPackage/catalogPackage/SaveCommand.java
+ optionalPackage.catalogPackage.SaveCommand
+optionalPackage/catalogPackage/AddCommand.java
+ optionalPackage.catalogPackage.AddCommand
+optionalPackage/catalogPackage/PlayCommand.java
+ optionalPackage.catalogPackage.PlayCommand
+optionalPackage/Shell.java
+ optionalPackage.Shell
+optionalPackage/OptionalMain.java
+ optionalPackage.OptionalMain
+optionalPackage/catalogPackage/LoadCommand.java
+ optionalPackage.catalogPackage.LoadCommand
