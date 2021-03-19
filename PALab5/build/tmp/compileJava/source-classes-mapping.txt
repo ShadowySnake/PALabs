@@ -1,14 +1,16 @@
-compulsoryPackage/itemsPackage/TextFile.java
- compulsoryPackage.itemsPackage.TextFile
-compulsoryPackage/catalogPackage/Catalog.java
- compulsoryPackage.catalogPackage.Catalog
-compulsoryPackage/itemsPackage/Items.java
- compulsoryPackage.itemsPackage.Items
 compulsoryPackage/itemsPackage/PNG_image.java
  compulsoryPackage.itemsPackage.PNG_image
+compulsoryPackage/exceptionsThrower/CustomException.java
+ compulsoryPackage.exceptionsThrower.CustomException
+compulsoryPackage/itemsPackage/TextFile.java
+ compulsoryPackage.itemsPackage.TextFile
+compulsoryPackage/itemsPackage/Items.java
+ compulsoryPackage.itemsPackage.Items
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
-compulsoryPackage/CustomException.java
- compulsoryPackage.CustomException
+compulsoryPackage/exceptionsThrower/MyChecker.java
+ compulsoryPackage.exceptionsThrower.MyChecker
+compulsoryPackage/catalogPackage/Catalog.java
+ compulsoryPackage.catalogPackage.Catalog
 compulsoryPackage/catalogPackage/IOClass.java
  compulsoryPackage.catalogPackage.IOClass

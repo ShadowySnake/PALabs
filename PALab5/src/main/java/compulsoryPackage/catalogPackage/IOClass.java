@@ -3,12 +3,13 @@ package compulsoryPackage.catalogPackage;
 import java.awt.*;
 import java.io.*;
 
-public class IOClass implements Serializable{
+public class IOClass{
     String localPath;
     Desktop desktop;
 
     public IOClass(String pathName){
         this.localPath = pathName;
+        this.desktop = Desktop.getDesktop();
     }
 
     public void play(String filePath){
@@ -34,19 +35,22 @@ public class IOClass implements Serializable{
         }
     }
 
-    public void load(Catalog catalog, String filePath){
+    public Catalog load(String filePath){
         try {
             FileInputStream file = new FileInputStream(filePath);
             ObjectInputStream in = new ObjectInputStream(file);
-            catalog = (Catalog) in.readObject();
+            Catalog foundCatalog = (Catalog) in.readObject();
             in.close();
             file.close();
+            return foundCatalog;
         } catch (IOException e) {
             System.out.println("File may not exist!");
             e.printStackTrace();
+            return null;
         } catch (ClassNotFoundException e){
             System.out.println("This class does not exist!");
             e.printStackTrace();
+            return null;
         }
     }
 }

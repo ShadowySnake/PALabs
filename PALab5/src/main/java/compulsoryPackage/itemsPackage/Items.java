@@ -31,6 +31,6 @@ public abstract class Items implements Serializable {
     }
 
     public String getFullPath(){
-        return (getFilePath() + "\\" + getCatalogNameFile() + getFileExtension());
+        return (this.getFilePath() + "\\" + this.getCatalogNameFile() + this.getFileExtension());
     }
 }

@@ -1,6 +1,7 @@
 package compulsoryPackage.catalogPackage;
 
 
+import compulsoryPackage.exceptionsThrower.MyChecker;
 import compulsoryPackage.itemsPackage.Items;
 
 import java.io.Serializable;
@@ -8,17 +9,27 @@ import java.util.HashMap;
 
 public class Catalog implements Serializable {
     String localPath;
-    IOClass inputOutput;
+    transient IOClass inputOutput;
     HashMap<String, Items> itemsMap;
+    MyChecker errorChecker;
 
     public  Catalog(String pathName){
      this.localPath = pathName;
      this.inputOutput = new IOClass(pathName);
      this.itemsMap = new HashMap<>();
+     this.errorChecker = new MyChecker(pathName);
     }
 
-    public void add(){
-
+    public void add(Items item){
+        try
+        {
+            errorChecker.checkValidity(item);
+            this.itemsMap.put(item.getCatalogNameFile(), item);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void list(){
@@ -34,7 +45,7 @@ public class Catalog implements Serializable {
         this.inputOutput.save(this, localPath + "/" + nameForFile);
     }
 
-    public void load(String fileName){
-        this.inputOutput.load(this, localPath + "/" + fileName);
+    public Catalog load(String fileName){
+        return this.inputOutput.load(localPath + "/" + fileName);
     }
 }
