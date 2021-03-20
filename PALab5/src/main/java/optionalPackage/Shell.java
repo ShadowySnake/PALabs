@@ -16,7 +16,7 @@ public class Shell implements Serializable {
         Scanner myObj = new Scanner(System.in);
         label:
         while (true){
-            System.out.println("Type your command of choice: 'add' 'list' 'save' 'load' 'play' or 'quit' to exit ");
+            System.out.println("Type your command of choice: 'add' 'list' 'save' 'load' 'play' 'report' or 'quit' to exit ");
             String givenInput;
             givenInput = myObj.nextLine();
             switch (givenInput) {
@@ -35,6 +35,9 @@ public class Shell implements Serializable {
                     break;
                 case "play":
                     new PlayCommand(theCatalog);
+                    break;
+                case "report":
+                    new ReportCommand(theCatalog);
                     break;
                 case "quit":
                     break label;
