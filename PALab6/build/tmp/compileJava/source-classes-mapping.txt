@@ -1,0 +1,14 @@
+compulsoryPackage/ConfigurationPanel.java
+ compulsoryPackage.ConfigurationPanel
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
+compulsoryPackage/Circle.java
+ compulsoryPackage.Circle
+compulsoryPackage/MainFrame.java
+ compulsoryPackage.MainFrame
+ compulsoryPackage.MainFrame$1
+compulsoryPackage/ControlPanel.java
+ compulsoryPackage.ControlPanel
+compulsoryPackage/Canvas.java
+ compulsoryPackage.Canvas
+ compulsoryPackage.Canvas$1
