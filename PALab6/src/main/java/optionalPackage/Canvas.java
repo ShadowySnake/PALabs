@@ -43,6 +43,8 @@ public class Canvas extends JPanel {
                             drawnOBJ.deleteSquare(square);
                         }
                     }
+
+                    repaint();
                 } else if(graphics != null) {
                     int stroke = Integer.parseInt(MainFrame.form.shapesStroke.getText());
                     String type = MainFrame.form.shapeType.getText();

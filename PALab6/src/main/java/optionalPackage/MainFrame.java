@@ -1,5 +1,7 @@
 package optionalPackage;
 
+import optionalPackage.shapes.Circle;
+import optionalPackage.shapes.Squares;
 import optionalPackage.tools.ConfigurationPanel;
 import optionalPackage.tools.ControlPanel;
 
@@ -43,6 +45,17 @@ public class MainFrame extends JFrame {
                 int repeat = Integer.parseInt(form.shapesNo.getText());
 
                 drawArea.drawRandomShapes(repeat);
+                repaint();
+            } else if (e.getSource() == form.deleteButton) {
+                Circle node = drawArea.drawnOBJ.getNodeAt(drawArea.currentMouseX, drawArea.currentMouseY);
+                if (node != null) {
+                    drawArea.drawnOBJ.deleteNode(node);
+                } else {
+                    Squares square = drawArea.drawnOBJ.getSquareAt(drawArea.currentMouseX, drawArea.currentMouseY);
+                    if(square!=null){
+                        drawArea.drawnOBJ.deleteSquare(square);
+                    }
+                }
                 repaint();
             }
         }
