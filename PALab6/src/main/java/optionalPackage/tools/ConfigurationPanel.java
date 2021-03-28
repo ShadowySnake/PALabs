@@ -14,7 +14,7 @@ public class ConfigurationPanel extends JPanel {
     public JTextField shapeType = new JFormattedTextField();
 
     public JButton drawButton = new JButton("Draw");
-    public JButton deleteButton = new JButton("Delete");
+    public JButton deleteButton = new JButton("Delete (Right-Click)");
 
     public ConfigurationPanel() {
         this.setBorder(BorderFactory.createTitledBorder("Toolbar"));

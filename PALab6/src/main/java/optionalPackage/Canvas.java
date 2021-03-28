@@ -2,12 +2,14 @@ package optionalPackage;
 
 import optionalPackage.shapes.Circle;
 import optionalPackage.shapes.Edge;
+import optionalPackage.shapes.SimpleLines;
 import optionalPackage.shapes.Squares;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
@@ -16,6 +18,7 @@ public class Canvas extends JPanel {
     private BufferedImage image;
     private Graphics2D graphics;
     public int currentMouseX, currentMouseY;
+    int lastMouseXPress, lastMouseYPress;
     int lastX = -1, lastY = -1;
 
     DrawnObjects drawnOBJ;
@@ -41,6 +44,13 @@ public class Canvas extends JPanel {
 
                         if(square!=null){
                             drawnOBJ.deleteSquare(square);
+                        } else {
+                            int stroke = Integer.parseInt(MainFrame.form.shapesStroke.getText());
+                            SimpleLines line = drawnOBJ.getLineAt(currentMouseX,currentMouseY,stroke);
+
+                            if(line!=null){
+                                drawnOBJ.linesList.remove(line);
+                            }
                         }
                     }
 
@@ -87,6 +97,26 @@ public class Canvas extends JPanel {
                 }
             }
         });
+
+        addMouseMotionListener(new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                currentMouseX = e.getX();
+                currentMouseY = e.getY();
+
+                if(graphics != null){
+                    drawnOBJ.addLine(new SimpleLines(lastMouseXPress,lastMouseYPress,currentMouseX,currentMouseY));
+                    repaint();
+                    lastMouseXPress = currentMouseX;
+                    lastMouseYPress = currentMouseY;
+                }
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+
+            }
+        });
     }
 
     protected void paintComponent(Graphics g) {
@@ -106,6 +136,11 @@ public class Canvas extends JPanel {
 
         for (Squares square: drawnOBJ.getSquaresList()){
             drawSquareAt(square.x,square.y,square.width);
+        }
+
+        for (SimpleLines line: drawnOBJ.getLinesList()){
+            graphics.setPaint(Color.black);
+            graphics.drawLine(line.startX,line.startY,line.endX,line.endY);
         }
 
         g.drawImage(image, 0, 0, null);

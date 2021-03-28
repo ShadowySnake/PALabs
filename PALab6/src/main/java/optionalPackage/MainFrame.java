@@ -28,6 +28,7 @@ public class MainFrame extends JFrame {
                 drawArea.drawnOBJ.nodesList.clear();
                 drawArea.drawnOBJ.edgesList.clear();
                 drawArea.drawnOBJ.squaresList.clear();
+                drawArea.drawnOBJ.linesList.clear();
                 drawArea.clear();
             } else if (e.getSource() == control.loadButton) {
                 try {
@@ -76,6 +77,7 @@ public class MainFrame extends JFrame {
         drawArea = new Canvas();
         control = new ControlPanel(this);
         form.drawButton.addActionListener(actionListener);
+        form.deleteButton.addActionListener(actionListener);
         control.resetButton.addActionListener(actionListener);
         control.saveButton.addActionListener(actionListener);
         control.loadButton.addActionListener(actionListener);
@@ -89,6 +91,7 @@ public class MainFrame extends JFrame {
 
     public void save() throws IOException {
         ImageIO.write(drawArea.getImage(), "PNG", new File("lab6_Paint_demo.png"));
+        System.out.println(drawArea.drawnOBJ.toString());
     }
 
     public void load() throws IOException {

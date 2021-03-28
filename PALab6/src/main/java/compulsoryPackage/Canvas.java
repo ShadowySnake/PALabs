@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
@@ -11,6 +12,7 @@ public class Canvas extends JPanel {
 
     private BufferedImage image;
     private Graphics2D graphics;
+    int currentMouseX,currentMouseY,lastMouseXPress,lastMouseYPress;
 
     public Canvas() {
         this.setBorder(BorderFactory.createTitledBorder("Drawing paper:"));
@@ -20,10 +22,31 @@ public class Canvas extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 if(graphics != null) {
                     int stroke = Integer.parseInt(MainFrame.form.shapesStroke.getText());
-
-                    drawNode(e.getX(), e.getY(), stroke);
+                    lastMouseXPress = e.getX();
+                    lastMouseYPress = e.getY();
+                    drawNode(lastMouseXPress, lastMouseYPress, stroke);
                     repaint();
                 }
+            }
+        });
+
+        addMouseMotionListener(new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                currentMouseX = e.getX();
+                currentMouseY = e.getY();
+
+                if(graphics != null){
+                    graphics.drawLine(lastMouseXPress,lastMouseYPress,currentMouseX,currentMouseY);
+                    repaint();
+                    lastMouseXPress = currentMouseX;
+                    lastMouseYPress = currentMouseY;
+                }
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+
             }
         });
     }
