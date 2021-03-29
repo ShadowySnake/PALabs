@@ -25,8 +25,8 @@ compulsoryPackage/MainFrame.java
  compulsoryPackage.MainFrame$1
 optionalPackage/shapes/SimpleLines.java
  optionalPackage.shapes.SimpleLines
-optionalPackage/tools/ControlPanel.java
- optionalPackage.tools.ControlPanel
+optionalPackage/DrawnObjects.java
+ optionalPackage.DrawnObjects
 optionalPackage/MainFrame.java
  optionalPackage.MainFrame
  optionalPackage.MainFrame$1
@@ -34,5 +34,5 @@ optionalPackage/Canvas.java
  optionalPackage.Canvas
  optionalPackage.Canvas$1
  optionalPackage.Canvas$2
-optionalPackage/DrawnObjects.java
- optionalPackage.DrawnObjects
+optionalPackage/tools/ControlPanel.java
+ optionalPackage.tools.ControlPanel

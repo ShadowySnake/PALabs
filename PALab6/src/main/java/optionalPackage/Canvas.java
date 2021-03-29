@@ -114,7 +114,8 @@ public class Canvas extends JPanel {
 
             @Override
             public void mouseMoved(MouseEvent e) {
-
+                lastMouseXPress = e.getX();
+                lastMouseYPress = e.getY();
             }
         });
     }
