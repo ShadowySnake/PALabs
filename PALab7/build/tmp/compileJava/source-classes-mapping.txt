@@ -4,9 +4,21 @@ compulsoryPackage/Player.java
  compulsoryPackage.Player
 compulsoryPackage/ClosedSequence.java
  compulsoryPackage.ClosedSequence
-compulsoryPackage/CompulsoryMain.java
- compulsoryPackage.CompulsoryMain
-compulsoryPackage/Board.java
- compulsoryPackage.Board
 compulsoryPackage/Game.java
  compulsoryPackage.Game
+compulsoryPackage/Board.java
+ compulsoryPackage.Board
+optionalPackage/Pair.java
+ optionalPackage.Pair
+optionalPackage/ClosedSequence.java
+ optionalPackage.ClosedSequence
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
+optionalPackage/Board.java
+ optionalPackage.Board
+optionalPackage/Player.java
+ optionalPackage.Player
+optionalPackage/Game.java
+ optionalPackage.Game
+optionalPackage/OptionalMain.java
+ optionalPackage.OptionalMain
