@@ -17,6 +17,10 @@ public class Board
         return closedSequence.pullFirst();
     }
 
+    public synchronized Pair extractGiven(int givenPosition){
+        return closedSequence.pullGiven(givenPosition);
+    }
+
     public ClosedSequence getClosedSequence() {
         return closedSequence;
     }

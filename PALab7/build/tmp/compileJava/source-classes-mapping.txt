@@ -1,19 +1,19 @@
-compulsoryPackage/Pair.java
- compulsoryPackage.Pair
+optionalPackage/Pair.java
+ optionalPackage.Pair
 compulsoryPackage/Player.java
  compulsoryPackage.Player
-compulsoryPackage/ClosedSequence.java
- compulsoryPackage.ClosedSequence
+compulsoryPackage/Pair.java
+ compulsoryPackage.Pair
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
 compulsoryPackage/Game.java
  compulsoryPackage.Game
 compulsoryPackage/Board.java
  compulsoryPackage.Board
-optionalPackage/Pair.java
- optionalPackage.Pair
+compulsoryPackage/ClosedSequence.java
+ compulsoryPackage.ClosedSequence
 optionalPackage/CustomException.java
  optionalPackage.CustomException
-compulsoryPackage/CompulsoryMain.java
- compulsoryPackage.CompulsoryMain
 optionalPackage/ClosedSequence.java
  optionalPackage.ClosedSequence
 optionalPackage/Board.java

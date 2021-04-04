@@ -10,11 +10,15 @@ public class Game
     private Board gameBoard;
     private final List<Player> playersList = new ArrayList<>();
     private boolean hasEnded = false;
+    public boolean aHumanPlays = false;
+    public boolean aBotPlays = false;
     private static final ExecutorService executors = Executors.newFixedThreadPool(8);
 
     public void addPlayer(Player player)
     {
         playersList.add(player);
+        if( player.getPlayerType().equals("Manual") ) this.aHumanPlays = true;
+        else if(player.getPlayerType().equals("Auto") ) this.aBotPlays = true;
         player.setCurrentGame(this);
     }
     public void setGameBoard(Board board)

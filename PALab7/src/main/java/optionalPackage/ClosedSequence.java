@@ -31,6 +31,12 @@ public class ClosedSequence
         return tokenPair;
     }
 
+    public Pair pullGiven(int givenPosition){
+        Pair tokenPair = tokenPairsList.get(givenPosition);
+        tokenPairsList.remove(tokenPair);
+        return  tokenPair;
+    }
+
     public boolean isEmptySequence()
     {
         if(tokenPairsList.isEmpty())

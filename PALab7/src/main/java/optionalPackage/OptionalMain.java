@@ -6,7 +6,7 @@ public class OptionalMain {
             Game sequenceGame = new Game();
             sequenceGame.setGameBoard(new Board(10));
             sequenceGame.addPlayer(new Player("Player1", "Auto"));
-            sequenceGame.addPlayer(new Player("Player2","Manual"));
+            sequenceGame.addPlayer(new Player("Player2","Auto"));
 
             sequenceGame.printPlayersList();
             sequenceGame.start();

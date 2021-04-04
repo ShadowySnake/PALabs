@@ -23,6 +23,10 @@ public class Player implements Runnable
         return playerScore;
     }
 
+    public String getPlayerType() {
+        return playerType;
+    }
+
     private boolean play() throws InterruptedException
     {
         Board board = currentGame.getGameBoard();
@@ -31,7 +35,10 @@ public class Player implements Runnable
             return false;
         }
 
-        int THINKING_TIME = 10000;
+        int THINKING_TIME;
+        if (currentGame.aHumanPlays) THINKING_TIME = 10000;
+        else THINKING_TIME = 500;
+
         Pair chosenPair;
 
         if( this.playerType.equals("Auto") ) {
@@ -46,9 +53,10 @@ public class Player implements Runnable
             Scanner myObj = new Scanner(System.in);
             int inputInt = myObj.nextInt();
 
-            chosenPair = boardSequence.get(inputInt);
-            boardSequence.remove(chosenPair);
+            chosenPair = board.extractGiven(inputInt);
             closedSequence.add(chosenPair);
+            if (currentGame.aBotPlays) THINKING_TIME = 5000;
+            // this is used in case a human plays against a bot in order to give the human enough time to react, instead of wasting a turn
         }
 
         this.playerScore = playerScore + chosenPair.strictlyPositiveNum;
