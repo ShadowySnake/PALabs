@@ -12,9 +12,13 @@ public class Board
         closedSequence.createSequence();
     }
 
-    public synchronized Pair extract()
+    public synchronized Pair extractFirst()
     {
         return closedSequence.pullFirst();
+    }
+
+    public ClosedSequence getClosedSequence() {
+        return closedSequence;
     }
 
     public boolean emptySequence()

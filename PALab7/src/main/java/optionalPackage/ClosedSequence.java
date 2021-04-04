@@ -42,4 +42,8 @@ public class ClosedSequence
     {
         tokenPairsList.add(tokenPair);
     }
+
+    public List<Pair> getTokenPairsList() {
+        return tokenPairsList;
+    }
 }
