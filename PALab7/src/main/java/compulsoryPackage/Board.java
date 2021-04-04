@@ -1,20 +1,24 @@
 package compulsoryPackage;
 
-public class Board {
-    public ClosedSequence sequenceStarter;
+public class Board
+{
     int tokens;
+    public ClosedSequence closedSequence;
 
-    public Board(int tokensNumber) {
+    public Board(int tokensNumber)
+    {
         this.tokens = tokensNumber;
-        sequenceStarter = new ClosedSequence(tokensNumber);
+        this.closedSequence = new ClosedSequence(tokensNumber);
+        closedSequence.createSequence();
     }
 
-    public synchronized Pair extract() {
-        return sequenceStarter.pullFirst();
+    public synchronized Pair extract()
+    {
+        return closedSequence.pullFirst();
     }
 
-    public boolean emptySequence() {
-        return sequenceStarter.isEmptySequence();
+    public boolean emptySequence()
+    {
+        return closedSequence.isEmptySequence();
     }
-
 }

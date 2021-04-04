@@ -4,31 +4,42 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ClosedSequence {
-    private final List<Pair> tokenPairs = new ArrayList<>();
+public class ClosedSequence
+{
     int totalTokens;
+    private final List<Pair> tokenPairsList = new ArrayList<>();
 
-    public ClosedSequence(int givenTokens) {
+    public ClosedSequence(int givenTokens)
+    {
         this.totalTokens = givenTokens;
-        this.createSequence();
     }
 
-    public void createSequence() {
-        for (int tokenNum = 1; tokenNum < totalTokens; ++tokenNum) {
-            for (int valueNum = tokenNum + 1; valueNum < totalTokens; ++valueNum) {
-                tokenPairs.add(new Pair(tokenNum, valueNum));
+    public void createSequence()
+    {
+        for(int i = 1; i < totalTokens ; ++i) {
+            for (int j = i + 1; j <= totalTokens; ++j) {
+                tokenPairsList.add(new Pair(i, j));
             }
         }
-        Collections.shuffle(tokenPairs);
+        Collections.shuffle(tokenPairsList);
     }
 
-    public Pair pullFirst() {
-        Pair firstInSequence = tokenPairs.get(0);
-        tokenPairs.remove(firstInSequence);
-        return firstInSequence;
+    public Pair pullFirst()
+    {
+        Pair tokenPair = tokenPairsList.get(0);
+        tokenPairsList.remove(tokenPair);
+        return tokenPair;
     }
 
-    public boolean isEmptySequence() {
-        return tokenPairs.isEmpty();
+    public boolean isEmptySequence()
+    {
+        if(tokenPairsList.isEmpty())
+            return true;
+        return false;
+    }
+
+    public void add(Pair tokenPair)
+    {
+        tokenPairsList.add(tokenPair);
     }
 }

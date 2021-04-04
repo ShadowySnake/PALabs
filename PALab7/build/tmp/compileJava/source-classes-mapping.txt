@@ -1,12 +1,12 @@
-compulsoryPackage/Board.java
- compulsoryPackage.Board
-compulsoryPackage/ClosedSequence.java
- compulsoryPackage.ClosedSequence
 compulsoryPackage/Pair.java
  compulsoryPackage.Pair
 compulsoryPackage/Player.java
  compulsoryPackage.Player
+compulsoryPackage/ClosedSequence.java
+ compulsoryPackage.ClosedSequence
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
+compulsoryPackage/Board.java
+ compulsoryPackage.Board
 compulsoryPackage/Game.java
  compulsoryPackage.Game

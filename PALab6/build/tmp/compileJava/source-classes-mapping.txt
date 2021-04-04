@@ -2,8 +2,10 @@ compulsoryPackage/ConfigurationPanel.java
  compulsoryPackage.ConfigurationPanel
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
-compulsoryPackage/ControlPanel.java
- compulsoryPackage.ControlPanel
+optionalPackage/Canvas.java
+ optionalPackage.Canvas
+ optionalPackage.Canvas$1
+ optionalPackage.Canvas$2
 compulsoryPackage/Circle.java
  compulsoryPackage.Circle
 optionalPackage/tools/ConfigurationPanel.java
@@ -16,23 +18,21 @@ optionalPackage/shapes/Circle.java
  optionalPackage.shapes.Circle
 optionalPackage/shapes/Squares.java
  optionalPackage.shapes.Squares
-compulsoryPackage/Canvas.java
- compulsoryPackage.Canvas
- compulsoryPackage.Canvas$1
- compulsoryPackage.Canvas$2
-compulsoryPackage/MainFrame.java
- compulsoryPackage.MainFrame
- compulsoryPackage.MainFrame$1
+optionalPackage/MainFrame.java
+ optionalPackage.MainFrame
+ optionalPackage.MainFrame$1
+optionalPackage/tools/ControlPanel.java
+ optionalPackage.tools.ControlPanel
 optionalPackage/shapes/SimpleLines.java
  optionalPackage.shapes.SimpleLines
 optionalPackage/DrawnObjects.java
  optionalPackage.DrawnObjects
-optionalPackage/MainFrame.java
- optionalPackage.MainFrame
- optionalPackage.MainFrame$1
-optionalPackage/Canvas.java
- optionalPackage.Canvas
- optionalPackage.Canvas$1
- optionalPackage.Canvas$2
-optionalPackage/tools/ControlPanel.java
- optionalPackage.tools.ControlPanel
+compulsoryPackage/MainFrame.java
+ compulsoryPackage.MainFrame
+ compulsoryPackage.MainFrame$1
+compulsoryPackage/ControlPanel.java
+ compulsoryPackage.ControlPanel
+compulsoryPackage/Canvas.java
+ compulsoryPackage.Canvas
+ compulsoryPackage.Canvas$1
+ compulsoryPackage.Canvas$2
