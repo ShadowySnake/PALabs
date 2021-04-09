@@ -38,6 +38,9 @@ public class Game
 
     public synchronized void start() throws InterruptedException  {
         int currentIndex = 0;
+        Thread timekeeper = new TimeKeeper(50,this.gameBoard);
+        timekeeper.setDaemon(true);
+
         this.playerNumbers = playersList.size();
         for(Player p : playersList) {
             p.setPlayerNumber(currentIndex);
@@ -48,6 +51,7 @@ public class Game
         for (Thread thread : playerThreads){
             thread.start();
         }
+        timekeeper.start();
 
         for (Thread thread : playerThreads){
             try {
@@ -57,9 +61,11 @@ public class Game
                 e.printStackTrace();
             }
         }
+        timekeeper.join();
 
         System.out.println("\nThe game has ended!");
 
+        Thread.sleep(1000);
         this.declareWinner();
     }
 

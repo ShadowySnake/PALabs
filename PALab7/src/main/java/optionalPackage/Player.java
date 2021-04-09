@@ -74,6 +74,7 @@ public class Player implements Runnable
                 gameBoard.notify();
             }
         }
+        Thread.sleep(1000);
         return true;
     }
 
