@@ -9,7 +9,9 @@ public class Player implements Runnable
     private final String playerType;
     private Game currentGame;
     private ClosedSequence closedSequence;
+    private  Board gameBoard;
     private int playerScore;
+    private int playerNumber;
 
     public Player(String givenName,String playerType) throws CustomException
     {
@@ -23,49 +25,55 @@ public class Player implements Runnable
         return playerScore;
     }
 
-    public String getPlayerType() {
-        return playerType;
+    public void setPlayerNumber(int givenNumber){
+        this.playerNumber = givenNumber;
     }
 
     private boolean play() throws InterruptedException
     {
-        Board board = currentGame.getGameBoard();
-        if (closedSequence == null) closedSequence = new ClosedSequence(board.closedSequence.totalTokens);
-        if (board.emptySequence() || currentGame.isEnded()) {
-            return false;
+
+        synchronized (gameBoard) {
+            if ( (playerNumber != gameBoard.getThreadNumber())) gameBoard.wait();
+            else {
+                if (closedSequence == null) closedSequence = new ClosedSequence(gameBoard.closedSequence.totalTokens);
+
+                if (gameBoard.emptySequence() || currentGame.isEnded()) {
+                    if(playerNumber == (currentGame.playerNumbers - 1) ) gameBoard.setThreadNumber(0);
+                    else gameBoard.setThreadNumber(playerNumber + 1);
+                    gameBoard.notifyAll();
+                    return false;
+                }
+
+
+                Pair chosenPair;
+
+                if (this.playerType.equals("Auto")) {
+                    chosenPair = gameBoard.extractFirst();
+                    closedSequence.add(chosenPair);
+                    this.playerScore = playerScore + chosenPair.strictlyPositiveNum;
+                } else {
+                    List<Pair> boardSequence = gameBoard.getClosedSequence().getTokenPairsList();
+                    boardSequence.forEach(x -> System.out.println("Available pairs: " +
+                            x.randomTokenNum + "," + x.strictlyPositiveNum + "\n"));
+                    System.out.println("Type a number from 0 to " + boardSequence.size());
+                    Scanner myObj = new Scanner(System.in);
+                    int inputInt = myObj.nextInt();
+
+                    chosenPair = gameBoard.extractGiven(inputInt);
+                    closedSequence.add(chosenPair);
+                }
+
+                this.playerScore = playerScore + chosenPair.strictlyPositiveNum;
+
+                if (closedSequence.isEmptySequence()) {
+                    currentGame.setEnd();
+                }
+
+                if(playerNumber == (currentGame.playerNumbers - 1) ) gameBoard.setThreadNumber(0);
+                else gameBoard.setThreadNumber(playerNumber + 1);
+                gameBoard.notify();
+            }
         }
-
-        int THINKING_TIME;
-        if (currentGame.aHumanPlays) THINKING_TIME = 10000;
-        else THINKING_TIME = 500;
-
-        Pair chosenPair;
-
-        if( this.playerType.equals("Auto") ) {
-            chosenPair = board.extractFirst();
-            closedSequence.add(chosenPair);
-            this.playerScore = playerScore + chosenPair.strictlyPositiveNum;
-        }
-        else {
-            List<Pair> boardSequence = board.getClosedSequence().getTokenPairsList();
-            boardSequence.forEach(x -> System.out.println("Available pairs: " + x.randomTokenNum + "," + x.strictlyPositiveNum + "\n"));
-            System.out.println("Type a number from 0 to the number of displayed (pairs-1)");
-            Scanner myObj = new Scanner(System.in);
-            int inputInt = myObj.nextInt();
-
-            chosenPair = board.extractGiven(inputInt);
-            closedSequence.add(chosenPair);
-            if (currentGame.aBotPlays) THINKING_TIME = 5000;
-            // this is used in case a human plays against a bot in order to give the human enough time to react, instead of wasting a turn
-        }
-
-        this.playerScore = playerScore + chosenPair.strictlyPositiveNum;
-
-        Thread.sleep(THINKING_TIME);
-        if (closedSequence.isEmptySequence()) {
-            currentGame.setEnd();
-        }
-
         return true;
     }
 
@@ -84,7 +92,8 @@ public class Player implements Runnable
 
     public void setCurrentGame(Game game)
     {
-        currentGame = game;
+        this.currentGame = game;
+        this.gameBoard = currentGame.getGameBoard();
     }
 
     public String toString()

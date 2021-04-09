@@ -2,25 +2,21 @@ package optionalPackage;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class Game
 {
     private Board gameBoard;
     private final List<Player> playersList = new ArrayList<>();
+    private final List<Thread> playerThreads = new ArrayList<>();
     private boolean hasEnded = false;
-    public boolean aHumanPlays = false;
-    public boolean aBotPlays = false;
-    private static final ExecutorService executors = Executors.newFixedThreadPool(8);
+    public int playerNumbers;
 
     public void addPlayer(Player player)
     {
         playersList.add(player);
-        if( player.getPlayerType().equals("Manual") ) this.aHumanPlays = true;
-        else if(player.getPlayerType().equals("Auto") ) this.aBotPlays = true;
         player.setCurrentGame(this);
     }
+
     public void setGameBoard(Board board)
     {
         gameBoard = board;
@@ -40,14 +36,28 @@ public class Game
         this.hasEnded = true;
     }
 
-    public void start() throws InterruptedException  {
+    public synchronized void start() throws InterruptedException  {
+        int currentIndex = 0;
+        this.playerNumbers = playersList.size();
         for(Player p : playersList) {
-            executors.execute(p);
+            p.setPlayerNumber(currentIndex);
+            this.playerThreads.add(new Thread(p));
+            currentIndex++;
         }
-        executors.shutdown();
-        while (!executors.isTerminated()) {
-            Thread.sleep(100);
+
+        for (Thread thread : playerThreads){
+            thread.start();
         }
+
+        for (Thread thread : playerThreads){
+            try {
+                thread.join();
+            }
+            catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+
         System.out.println("\nThe game has ended!");
 
         this.declareWinner();

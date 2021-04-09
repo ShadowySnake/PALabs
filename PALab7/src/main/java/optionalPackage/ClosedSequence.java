@@ -39,9 +39,7 @@ public class ClosedSequence
 
     public boolean isEmptySequence()
     {
-        if(tokenPairsList.isEmpty())
-            return true;
-        return false;
+        return tokenPairsList.isEmpty();
     }
 
     public void add(Pair tokenPair)

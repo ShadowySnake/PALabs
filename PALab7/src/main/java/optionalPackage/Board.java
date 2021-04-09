@@ -4,12 +4,14 @@ public class Board
 {
     int tokens;
     public ClosedSequence closedSequence;
+    private int threadNumber;
 
     public Board(int tokensNumber)
     {
         this.tokens = tokensNumber;
         this.closedSequence = new ClosedSequence(tokensNumber);
         closedSequence.createSequence();
+        this.threadNumber = 0;
     }
 
     public synchronized Pair extractFirst()
@@ -28,5 +30,13 @@ public class Board
     public boolean emptySequence()
     {
         return closedSequence.isEmptySequence();
+    }
+
+    public int getThreadNumber() {
+        return threadNumber;
+    }
+
+    public void setThreadNumber(int threadNumber) {
+        this.threadNumber = threadNumber;
     }
 }
