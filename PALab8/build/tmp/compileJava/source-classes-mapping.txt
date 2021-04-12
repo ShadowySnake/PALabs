@@ -1,0 +1,10 @@
+compulsoryPackage/ConnectionManager.java
+ compulsoryPackage.ConnectionManager
+compulsoryPackage/GenresController.java
+ compulsoryPackage.GenresController
+compulsoryPackage/Database.java
+ compulsoryPackage.Database
+compulsoryPackage/MovieController.java
+ compulsoryPackage.MovieController
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
