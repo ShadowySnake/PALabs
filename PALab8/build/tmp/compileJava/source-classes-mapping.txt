@@ -1,12 +1,12 @@
 compulsoryPackage/ConnectionManager.java
  compulsoryPackage.ConnectionManager
-compulsoryPackage/GenresController.java
- compulsoryPackage.GenresController
-compulsoryPackage/Database.java
- compulsoryPackage.Database
 compulsoryPackage/MovieController.java
  compulsoryPackage.MovieController
 compulsoryPackage/MovieDetails.java
  compulsoryPackage.MovieDetails
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
+compulsoryPackage/Database.java
+ compulsoryPackage.Database
+compulsoryPackage/GenresController.java
+ compulsoryPackage.GenresController
