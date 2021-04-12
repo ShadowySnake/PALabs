@@ -26,9 +26,11 @@ public class Database
 
         String delGenres = "DELETE FROM genres WHERE id >= 1";
         String delMovies = "DELETE FROM movies WHERE id >= 1";
+        String delMoviesGenres = "DELETE FROM movie_genres WHERE movie_id >= 1";
         Statement statement = getConnection().createStatement();
         statement.executeQuery(delMovies);
         statement.executeQuery(delGenres);
+        statement.executeQuery(delMoviesGenres);
     }
     public static void commit() throws SQLException, ClassNotFoundException {
         if(!getConnection().getAutoCommit()){

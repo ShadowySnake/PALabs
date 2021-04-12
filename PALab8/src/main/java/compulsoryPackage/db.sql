@@ -20,6 +20,8 @@ CREATE TABLE genres(
 CREATE TABLE movie_genres(
   movie_id INT NOT NULL,
   genre_id INT NOT NULL,
+  movie_name VARCHAR2(256) NOT NULL,
+  genre_name VARCHAR2(256) NOT NULL,
   CONSTRAINT fk_movie_id FOREIGN KEY(movie_id) REFERENCES movies(id),
   CONSTRAINT fk_actor_id FOREIGN KEY(genre_id) REFERENCES genres(id)
 )

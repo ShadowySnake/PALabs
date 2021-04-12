@@ -32,7 +32,7 @@ public class MovieController
         try
         {
             Connection connection = Database.getConnection();
-            String sql = "select id from movies where name = ?";
+            String sql = "select id from movies where title = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, name);
             ResultSet result = preparedStatement.executeQuery();
@@ -50,7 +50,7 @@ public class MovieController
         try
         {
             Connection connection = Database.getConnection();
-            String sql = "select name from movies where id = ?";
+            String sql = "select title from movies where id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, id);
             ResultSet result = preparedStatement.executeQuery();

@@ -6,5 +6,7 @@ compulsoryPackage/Database.java
  compulsoryPackage.Database
 compulsoryPackage/MovieController.java
  compulsoryPackage.MovieController
+compulsoryPackage/MovieDetails.java
+ compulsoryPackage.MovieDetails
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
