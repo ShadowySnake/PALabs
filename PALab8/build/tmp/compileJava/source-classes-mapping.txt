@@ -1,12 +1,42 @@
 compulsoryPackage/ConnectionManager.java
  compulsoryPackage.ConnectionManager
+compulsoryPackage/GenresController.java
+ compulsoryPackage.GenresController
+compulsoryPackage/Database.java
+ compulsoryPackage.Database
 compulsoryPackage/MovieController.java
  compulsoryPackage.MovieController
 compulsoryPackage/MovieDetails.java
  compulsoryPackage.MovieDetails
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
-compulsoryPackage/Database.java
- compulsoryPackage.Database
-compulsoryPackage/GenresController.java
- compulsoryPackage.GenresController
+optionalPackage/ConnectionManager.java
+ optionalPackage.ConnectionManager
+optionalPackage/Database.java
+ optionalPackage.Database
+optionalPackage/Genres_Keeper.java
+ optionalPackage.Genres_Keeper
+optionalPackage/Genres.java
+ optionalPackage.Genres
+optionalPackage/Persons.java
+ optionalPackage.Persons
+optionalPackage/Director.java
+ optionalPackage.Director
+optionalPackage/Actor.java
+ optionalPackage.Actor
+optionalPackage/Movie.java
+ optionalPackage.Movie
+optionalPackage/GenresController.java
+ optionalPackage.GenresController
+optionalPackage/Movies_Keeper.java
+ optionalPackage.Movies_Keeper
+optionalPackage/PersonController.java
+ optionalPackage.PersonController
+optionalPackage/MovieController.java
+ optionalPackage.MovieController
+optionalPackage/Person_Keeper.java
+ optionalPackage.Person_Keeper
+optionalPackage/OptionalMain.java
+ optionalPackage.OptionalMain
+optionalPackage/MovieDetails.java
+ optionalPackage.MovieDetails

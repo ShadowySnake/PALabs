@@ -2,7 +2,11 @@ DROP TABLE movies CASCADE CONSTRAINTS
 /
 DROP TABLE genres CASCADE CONSTRAINTS
 /
+DROP TABLE movie_details CASCADE CONSTRAINTS
+/
 DROP TABLE movie_genres CASCADE CONSTRAINTS
+/
+DROP TABLE persons CASCADE CONSTRAINTS
 /
 CREATE TABLE movies(
   id INT NOT NULL PRIMARY KEY,
@@ -17,12 +21,18 @@ CREATE TABLE genres(
  name VARCHAR2(256) NOT NULL
 )
 /
-CREATE TABLE movie_genres(
+CREATE TABLE movie_details(
   movie_id INT NOT NULL,
   genre_id INT NOT NULL,
-  movie_name VARCHAR2(256) NOT NULL,
-  genre_name VARCHAR2(256) NOT NULL,
+  director_id INT NOT NULL,
   CONSTRAINT fk_movie_id FOREIGN KEY(movie_id) REFERENCES movies(id),
-  CONSTRAINT fk_actor_id FOREIGN KEY(genre_id) REFERENCES genres(id)
+  CONSTRAINT fk_genre_id FOREIGN KEY(genre_id) REFERENCES genres(id),
+  CONSTRAINT fk_director_id FOREIGN KEY(director_id) REFERENCES persons(id)
+)
+/
+CREATE TABLE persons(
+  id INT NOT NULL PRIMARY KEY,
+  person_name VARCHAR2(256) NOT NULL,
+  person_job VARCHAR2(20) NOT NULL
 )
 /
