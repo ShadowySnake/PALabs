@@ -3,15 +3,15 @@ package optionalPackage;
 import java.sql.Date;
 
 public class Movie {
-    private int id;
     private final String title;
     private final Date releaseDate;
     private final int duration;
     private final int score;
+    private int id;
     private int genreId;
     private int directorId;
 
-    public Movie(String title, Date releaseDate, int duration, int score){
+    public Movie(String title, Date releaseDate, int duration, int score) {
         this.title = title;
         this.releaseDate = releaseDate;
         this.duration = duration;
@@ -30,7 +30,7 @@ public class Movie {
         return id;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -42,19 +42,19 @@ public class Movie {
         return title;
     }
 
-    public void setDirectorId(int directorId) {
-        this.directorId = directorId;
-    }
-
-    public void setGenreId(int genreId) {
-        this.genreId = genreId;
-    }
-
     public int getDirectorId() {
         return directorId;
     }
 
+    public void setDirectorId(int directorId) {
+        this.directorId = directorId;
+    }
+
     public int getGenreId() {
         return genreId;
+    }
+
+    public void setGenreId(int genreId) {
+        this.genreId = genreId;
     }
 }

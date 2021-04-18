@@ -6,7 +6,7 @@ abstract class Persons {
     protected String job;
     protected int starringIn;
 
-    public Persons(int id, String name, String job, Integer starring){
+    public Persons(int id, String name, String job, Integer starring) {
         this.id = id;
         this.name = name;
         this.job = job;
@@ -25,7 +25,7 @@ abstract class Persons {
         return this.job;
     }
 
-    public int getStarringIN(){
+    public int getStarringIN() {
         return this.starringIn;
     }
 

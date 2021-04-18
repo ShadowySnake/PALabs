@@ -1,10 +1,10 @@
 package optionalPackage;
 
 public class Genres {
-    private int id;
     private final String name;
+    private int id;
 
-    public Genres(String name){
+    public Genres(String name) {
         this.name = name;
     }
 

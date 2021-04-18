@@ -4,27 +4,24 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Database
-{
-    private static Connection connection = null;
+public class Database {
     private static final ConnectionManager connectionManager = new ConnectionManager();
+    private static Connection connection = null;
 
-    public Database() { }
+    public Database() {
+    }
 
-    public static Connection getConnection() throws ClassNotFoundException, SQLException
-    {
-        if(connection == null)
+    public static Connection getConnection() throws ClassNotFoundException, SQLException {
+        if (connection == null)
             connection = connectionManager.createConnection();
         return connection;
     }
 
-    public static void closeConnection() throws SQLException
-    {
+    public static void closeConnection() throws SQLException {
         connection.close();
     }
 
-    public static void rollback() throws SQLException, ClassNotFoundException
-    {
+    public static void rollback() throws SQLException, ClassNotFoundException {
 
         String delGenres = "DELETE FROM genres WHERE id >= 1";
         String delMovies = "DELETE FROM movies WHERE id >= 1";
@@ -36,8 +33,9 @@ public class Database
         statement.executeQuery(delMovies);
         statement.executeQuery(delGenres);
     }
+
     public static void commit() throws SQLException, ClassNotFoundException {
-        if(!getConnection().getAutoCommit()){
+        if (!getConnection().getAutoCommit()) {
             Database.commit();
         }
     }
