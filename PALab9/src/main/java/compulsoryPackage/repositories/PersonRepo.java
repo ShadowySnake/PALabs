@@ -1,4 +1,4 @@
-package compulsoryPackage.controller;
+package compulsoryPackage.repositories;
 
 import compulsoryPackage.entity.Person;
 
@@ -7,10 +7,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import java.util.List;
 
-public class PersonController {
+public class PersonRepo {
     private final EntityManagerFactory entityManagerFactory;
 
-    public PersonController(EntityManagerFactory entityManagerFactory) {
+    public PersonRepo(EntityManagerFactory entityManagerFactory) {
         this.entityManagerFactory = entityManagerFactory;
     }
 

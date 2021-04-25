@@ -24,8 +24,8 @@ optionalPackage/MovieDetails.java
  optionalPackage.MovieDetails
 optionalPackage/GenresController.java
  optionalPackage.GenresController
-optionalPackage/CSVImporter.java
- optionalPackage.CSVImporter
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
 optionalPackage/Movies_Keeper.java
  optionalPackage.Movies_Keeper
 optionalPackage/Actor.java
@@ -36,9 +36,9 @@ optionalPackage/PersonController.java
  optionalPackage.PersonController
 optionalPackage/ConnectionManager.java
  optionalPackage.ConnectionManager
-optionalPackage/OptionalMain.java
- optionalPackage.OptionalMain
 compulsoryPackage/MovieDetails.java
  compulsoryPackage.MovieDetails
-compulsoryPackage/CompulsoryMain.java
- compulsoryPackage.CompulsoryMain
+optionalPackage/CSVImporter.java
+ optionalPackage.CSVImporter
+optionalPackage/OptionalMain.java
+ optionalPackage.OptionalMain

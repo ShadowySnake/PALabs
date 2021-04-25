@@ -1,7 +1,7 @@
 package compulsoryPackage.app;
 
-import compulsoryPackage.controller.MovieController;
-import compulsoryPackage.controller.PersonController;
+import compulsoryPackage.repositories.MovieRepo;
+import compulsoryPackage.repositories.PersonRepo;
 import compulsoryPackage.entity.Movie;
 import compulsoryPackage.entity.Person;
 
@@ -12,8 +12,8 @@ import java.util.Scanner;
 
 public class App {
     static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("MoviesPU");
-    static final PersonController personController = new PersonController(emf);
-    static final MovieController movieController = new MovieController(emf);
+    static final PersonRepo PERSON_REPO = new PersonRepo(emf);
+    static final MovieRepo MOVIE_REPO = new MovieRepo(emf);
 
     public static void main(String[] args) {
         new App().run();
@@ -51,11 +51,11 @@ public class App {
         Person person = new Person();
         person.setName(personName);
 
-        personController.create(person);
+        PERSON_REPO.create(person);
     }
 
     private void createMovie(String movieName, String directorName) {
-        Person director = personController.findByName(directorName);
+        Person director = PERSON_REPO.findByName(directorName);
 
         if (director == null)
             return;
@@ -64,23 +64,23 @@ public class App {
         movie.setName(movieName);
         movie.setDirectorId(director.getId());
 
-        movieController.create(movie);
+        MOVIE_REPO.create(movie);
     }
 
     private void listMovieDetails(String movieName) {
-        Movie foundMovie = movieController.findByName(movieName);
+        Movie foundMovie = MOVIE_REPO.findByName(movieName);
         if (foundMovie == null) return;
-        Person director = personController.findById(foundMovie.getDirectorId());
+        Person director = PERSON_REPO.findById(foundMovie.getDirectorId());
         System.out.println("The movie has the id " + foundMovie.getId() + " and is directed by " + director.getName());
     }
 
     private void listMoviesByDirector(String directorName) {
-        Person director = personController.findByName(directorName);
+        Person director = PERSON_REPO.findByName(directorName);
 
         if (director == null)
             return;
 
-        List<Movie> movies = movieController.findByDirectorId(director.getId());
+        List<Movie> movies = MOVIE_REPO.findByDirectorId(director.getId());
 
         for (Movie movie : movies) {
             System.out.println(movie.getName());

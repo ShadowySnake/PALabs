@@ -1,0 +1,16 @@
+package optionalPackage.daoClasses;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConnectionManager {
+    private static final String URL = "jdbc:oracle:thin:@localhost:1521/XE";
+    private static final String user = "student";
+    private static final String password = "STUDENT";
+
+    public Connection createConnection() throws SQLException, ClassNotFoundException {
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+        return  DriverManager.getConnection(URL, user, password);
+    }
+}

@@ -1,4 +1,4 @@
-package compulsoryPackage.controller;
+package compulsoryPackage.repositories;
 
 import compulsoryPackage.entity.Movie;
 
@@ -7,10 +7,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import java.util.List;
 
-public class MovieController {
+public class MovieRepo {
     private final EntityManagerFactory entityManagerFactory;
 
-    public MovieController(EntityManagerFactory entityManagerFactory) {
+    public MovieRepo(EntityManagerFactory entityManagerFactory) {
         this.entityManagerFactory = entityManagerFactory;
     }
 
