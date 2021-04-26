@@ -11,7 +11,7 @@ public class CompulsoryMain {
         try {
             server.init();
             server.waitForClients();
-        } catch (IOException e){
+        } catch (IOException e) {
             server.stop();
             System.out.println("Exception: " + e);
         }

@@ -13,7 +13,25 @@ public class SocialNetworkClient {
         this.socket = new Socket(SERVER_ADDRESS, PORT);
     }
 
-    private String readFromKeyboard () {
+    public static void main(String[] args) throws IOException {
+        SocialNetworkClient client = new SocialNetworkClient();
+        while (true) {
+            String request = client.readFromKeyboard();
+            if (request.equalsIgnoreCase("exit")) {
+                break;
+            } else if (request.equalsIgnoreCase("stop")) {
+                client.sendRequestToServer(request);
+                client.receiveResponseFromServer();
+                System.out.println("Client will also stop.");
+                break;
+            } else {
+                client.sendRequestToServer(request);
+                client.receiveResponseFromServer();
+            }
+        }
+    }
+
+    private String readFromKeyboard() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
@@ -30,19 +48,6 @@ public class SocialNetworkClient {
         String rsp = in.readLine();
         if (rsp != null) {
             System.out.println(rsp);
-        }
-    }
-
-    public static void main(String[] args) throws IOException {
-        SocialNetworkClient client = new SocialNetworkClient();
-        while (true) {
-            String request = client.readFromKeyboard();
-            if (request.equalsIgnoreCase("exit")) {
-                break;
-            } else {
-                client.sendRequestToServer(request);
-                client.receiveResponseFromServer();
-            }
         }
     }
 }

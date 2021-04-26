@@ -8,8 +8,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SocialNetworkServer
-{
+public class SocialNetworkServer {
     private int PORT = 8100;
     private ServerSocket serverSocket;
     private Boolean running = false;
@@ -20,25 +19,26 @@ public class SocialNetworkServer
     }
 
     public void init() throws IOException {
-        if (!this.running){
-            serverSocket=new ServerSocket(PORT);
+        if (!this.running) {
+            serverSocket = new ServerSocket(PORT);
             this.running = true;
             System.out.println("Server started!");
         }
     }
 
     public void stop() throws IOException {
-        if(this.running) {
+        if (this.running) {
             this.running = false;
             serverSocket.close();
         }
     }
 
     public void waitForClients() throws IOException {
-        while(this.running) {
-            Socket socket=serverSocket.accept();
+        while (this.running) {
+            Socket socket = serverSocket.accept();
             System.out.println("A client has connected");
             ClientThread c = new ClientThread(socket);
+            c.setServer(this);
             c.start();
             clients.add(c);
         }
