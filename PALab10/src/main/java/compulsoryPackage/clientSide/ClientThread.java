@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ClientThread extends Thread {
-    private Socket socket;
+    private final Socket socket;
     private SocialNetworkServer server;
 
     public ClientThread(Socket socket) {

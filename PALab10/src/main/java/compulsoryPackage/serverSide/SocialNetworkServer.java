@@ -9,10 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SocialNetworkServer {
-    private int PORT = 8100;
     private ServerSocket serverSocket;
     private Boolean running = false;
-    private List<ClientThread> clients;
+    private final List<ClientThread> clients;
 
     public SocialNetworkServer() {
         this.clients = new ArrayList<>();
@@ -20,6 +19,7 @@ public class SocialNetworkServer {
 
     public void init() throws IOException {
         if (!this.running) {
+            int PORT = 8100;
             serverSocket = new ServerSocket(PORT);
             this.running = true;
             System.out.println("Server started!");

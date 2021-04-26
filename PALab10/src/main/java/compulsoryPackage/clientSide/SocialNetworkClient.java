@@ -5,11 +5,11 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class SocialNetworkClient {
-    private static String SERVER_ADDRESS = "127.0.0.1";
-    private static int PORT = 8100;
-    Socket socket = null;
+    Socket socket;
 
     public SocialNetworkClient() throws IOException {
+        String SERVER_ADDRESS = "127.0.0.1";
+        int PORT = 8100;
         this.socket = new Socket(SERVER_ADDRESS, PORT);
     }
 
