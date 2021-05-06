@@ -1,8 +1,14 @@
-compulsoryPackage/clientSide/SocialNetworkClient.java
- compulsoryPackage.clientSide.SocialNetworkClient
-compulsoryPackage/CompulsoryMain.java
- compulsoryPackage.CompulsoryMain
 compulsoryPackage/serverSide/SocialNetworkServer.java
  compulsoryPackage.serverSide.SocialNetworkServer
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
+compulsoryPackage/clientSide/SocialNetworkClient.java
+ compulsoryPackage.clientSide.SocialNetworkClient
 compulsoryPackage/clientSide/ClientThread.java
  compulsoryPackage.clientSide.ClientThread
+optionalPackage/clientSide/ClientThread.java
+ optionalPackage.clientSide.ClientThread
+optionalPackage/clientSide/SocialNetworkClient.java
+ optionalPackage.clientSide.SocialNetworkClient
+optionalPackage/serverSide/SocialNetworkServer.java
+ optionalPackage.serverSide.SocialNetworkServer
