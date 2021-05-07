@@ -45,6 +45,7 @@ public class ClientThread extends Thread
                         if (client == null) {
                             if (object.findInList(command[1])) {
                                 client = command[1];
+                                object.addActiveUser(client);
                                 writeToClient("Successfully logged in!");
                             } else {
                                 writeToClient("This user is not registered");
@@ -81,7 +82,15 @@ public class ClientThread extends Thread
                         }
                         break;
                     case "stop":
-                        writeToClient("Exitting...");
+                        object.acceptingUsers = false;
+                        writeToClient("Server no longer accepts users.");
+                        break;
+                    case "exit":
+                        if (client != null) {
+                            object.removeActiveUser(client);
+                        } else if (object.getActiveUsers().size() > 0 &&
+                                object.getActiveUsers().get(0).equals("Back")) object.removeActiveUser("Back");
+                        writeToClient("Exiting...");
                         return;
                     default:
                         writeToClient("Unknown command.");

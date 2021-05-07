@@ -16,8 +16,9 @@ public class SocialNetworkClient
             BufferedWriter out = new BufferedWriter(output);
 
             String text;
-            while(!(text=scanner.nextLine()).equals("exit"))
+            while(true)
             {
+                text = scanner.nextLine();
                 out.write(text + "\n");
                 out.flush();
 
@@ -25,11 +26,16 @@ public class SocialNetworkClient
                 String msg;
                 msg=in.readLine();
                 System.out.println(msg);
-                if (msg.equals("Exitting...")) break;
+                if (msg.equals("Exiting...")) break;
             }
     }
 
     public static void main(String[] args) throws IOException {
-        new SocialNetworkClient();
+        try {
+            new SocialNetworkClient();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
