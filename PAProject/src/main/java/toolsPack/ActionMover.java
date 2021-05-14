@@ -61,13 +61,7 @@ public class ActionMover {
                     }
 
                 } else {
-
                     directionalPos = (int) (Math.random() * directionalPos);
-
-                    if (directionalPos > 3) {
-                        directionalPos = 3;
-                    }
-
                     gameVars.nextGhostsX[i] = gameVars.directionalX[directionalPos];
                     gameVars.nextGhostsY[i] = gameVars.directionalY[directionalPos];
                 }
@@ -94,7 +88,7 @@ public class ActionMover {
     void movePacman() {
 
         int nextMatrixPos;
-        short matrixValue;
+        int matrixValue;
 
         if (gameVars.currentPacmanX % gameVars.gridBlocksSize == 0 && gameVars.currentPacmanY % gameVars.gridBlocksSize == 0) {
             nextMatrixPos = gameVars.currentPacmanX / gameVars.gridBlocksSize +

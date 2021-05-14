@@ -4,12 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class GameDrawer extends JPanel implements ActionListener {
     public Variables gameVars = new Variables();
     public PacManData pacData = new PacManData(this);
 
-    public GameDrawer() {
+    public GameDrawer() throws IOException {
         pacData.soundPlayer.playSound("pacman_start.wav");
         pacData.loadImages();
         pacData.initVariables();

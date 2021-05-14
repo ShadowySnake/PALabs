@@ -16,7 +16,7 @@ public class PacManData {
     }
 
     void loadImages() {
-        String imagesPath = "D:\\Java\\PALabs\\PAProject\\src\\main\\resources\\characters\\";
+        String imagesPath = gameVars.absoluteDirectoryPath + "\\src\\main\\resources\\characters\\";
         // the path is subject to change, depending on whoever is running this game
         gameVars.pacDown = new ImageIcon(imagesPath + "down.gif").getImage();
         gameVars.pacUp = new ImageIcon(imagesPath + "up.gif").getImage();
@@ -29,7 +29,7 @@ public class PacManData {
 
     void initVariables() {
 
-        gameVars.screenMatrixHolder = new short[gameVars.totalGridBlocks * gameVars.totalGridBlocks];
+        gameVars.screenMatrixHolder = new int[gameVars.totalGridBlocks * gameVars.totalGridBlocks];
         gameVars.canvasDimension = new Dimension(1000, 1000);
         gameVars.currentGhostsX = new int[gameVars.maximumNumberOfAllowedGhosts];
         gameVars.nextGhostsX = new int[gameVars.maximumNumberOfAllowedGhosts];

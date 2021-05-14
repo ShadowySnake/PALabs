@@ -6,7 +6,7 @@ import javax.sound.sampled.Clip;
 import java.io.File;
 
 public class SoundPlayer {
-    private final static String melodiesPath = "D:\\Java\\PALabs\\PAProject\\src\\main\\resources\\music\\";
+    private final static String melodiesPath = Variables.absoluteDirectoryPath + "\\src\\main\\resources\\music\\";
     Clip audioLoop;
     AudioInputStream loopStream;
 
