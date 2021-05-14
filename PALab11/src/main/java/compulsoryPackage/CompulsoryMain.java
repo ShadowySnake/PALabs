@@ -19,8 +19,9 @@ public class CompulsoryMain implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Class.forName("oracle.jdbc.driver.OracleDriver");
-        this.personRepository.save(new Person("Momon"));
+        /*this.personRepository.save(new Person("Momon"));
         this.personRepository.save(new Person("Tony"));
-        this.personRepository.save(new Person("Gilgamesh"));
+        this.personRepository.save(new Person("Gilgamesh"));*/
+        System.out.println("Api has started");
     }
 }

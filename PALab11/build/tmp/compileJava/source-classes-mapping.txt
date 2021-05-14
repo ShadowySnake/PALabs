@@ -1,8 +1,8 @@
-compulsoryPackage/controllerPack/PersonController.java
- compulsoryPackage.controllerPack.PersonController
 compulsoryPackage/repositoryPack/PersonRepository.java
  compulsoryPackage.repositoryPack.PersonRepository
-compulsoryPackage/CompulsoryMain.java
- compulsoryPackage.CompulsoryMain
+compulsoryPackage/controllerPack/PersonController.java
+ compulsoryPackage.controllerPack.PersonController
 compulsoryPackage/entityPack/Person.java
  compulsoryPackage.entityPack.Person
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
