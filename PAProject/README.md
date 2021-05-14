@@ -1,9 +1,9 @@
-#Java Pacman  
+# Java Pacman  
 
  `Echipa: Zamfir Adrian-Iulian (solo)`  
  `Grupa 2A5`  
  
-#Descrierea proiectului   
+# Descrierea proiectului   
 
  Am incercat sa recreez clasicul joc "PacMan" (1980) in paradigma limbajului Java. 
  Jocul urmeaza modelul de "ENDLESS", adica nu se va termina niciodata, atata timp cat 
@@ -13,7 +13,7 @@
 viteza inamicilor si prin a adauga un inamic complet nou.
  
 
-#Subiecte atinse   
+# Subiecte atinse   
 
 --- Programare bazata pe obiecte ( parsarea de obiecte intre mai multe clase, initializarea 
 de variabile si utilizarea unor functii pentru a randa grafica jocului si pentru a tine
@@ -25,7 +25,8 @@ minte starea sa )
 incetineste randarea starii curente a jocului, pentru a putea da suficient timp algoritmului
 sa nu produca erori in calcul )
 
-#Update log
+# Update log  
+
 30.04.2021 --> v0.1 inceperea proiectului prin crearea GUI-ului si integrarea unui Adaptor
 pentru taste  
 03.05.2021 --> v0.3 Hardcodarea mapii direct intr-o variabila a jocului, inceputul algoritmului
