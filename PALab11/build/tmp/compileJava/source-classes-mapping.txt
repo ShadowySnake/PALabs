@@ -1,8 +1,16 @@
 compulsoryPackage/repositoryPack/PersonRepository.java
  compulsoryPackage.repositoryPack.PersonRepository
-compulsoryPackage/controllerPack/PersonController.java
- compulsoryPackage.controllerPack.PersonController
-compulsoryPackage/entityPack/Person.java
- compulsoryPackage.entityPack.Person
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
+optionalPackage/OptionalMain.java
+ optionalPackage.OptionalMain
+optionalPackage/entityPackage/Person.java
+ optionalPackage.entityPackage.Person
+compulsoryPackage/entityPack/Person.java
+ compulsoryPackage.entityPack.Person
+compulsoryPackage/controllerPack/PersonController.java
+ compulsoryPackage.controllerPack.PersonController
+optionalPackage/repositoryPackage/PersonRepository.java
+ optionalPackage.repositoryPackage.PersonRepository
+optionalPackage/controllerPackage/PersonController.java
+ optionalPackage.controllerPackage.PersonController

@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/")
+@RequestMapping("/api")
 public class PersonController {
 
     @Autowired
@@ -22,9 +22,12 @@ public class PersonController {
 
     @PostMapping("/create")
     public String createPerson(@RequestBody Person person) {
-       Person savedPerson = this.personRepository.save(person);
 
-        return "A new person with the id: " + savedPerson.getId() + " has been created!";
+        person.setFriendsNumber(0); // default number of friends
+        person.setFriendsList(null); // default list of friends
+        this.personRepository.save(person);
+
+        return "A new person with the id: " + person.getId() + " has been created!";
     }
 
     @PutMapping("/modify/{id}/{newName}")
