@@ -1,0 +1,4 @@
+compulsoryPackage/SomeClass.java
+ compulsoryPackage.SomeClass
+compulsoryPackage/CompulsoryMain.java
+ compulsoryPackage.CompulsoryMain
