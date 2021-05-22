@@ -1,4 +1,12 @@
-compulsoryPackage/SomeClass.java
- compulsoryPackage.SomeClass
+compulsoryPackage/Test.java
+ compulsoryPackage.Test
+compulsoryPackage/ClassExplorer.java
+ compulsoryPackage.ClassExplorer
 compulsoryPackage/CompulsoryMain.java
  compulsoryPackage.CompulsoryMain
+compulsoryPackage/SomeClass.java
+ compulsoryPackage.SomeClass
+optionalPackage/ClassExplorer.java
+ optionalPackage.ClassExplorer
+optionalPackage/OptionalMain.java
+ optionalPackage.OptionalMain
